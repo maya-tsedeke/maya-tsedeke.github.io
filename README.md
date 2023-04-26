@@ -1,14 +1,13 @@
 # To-do list
 
-Create a simple application to let users add/remove/edit tasks.
-Tasks should have: title, deadline, status
-![task-list](task_list.png)
-![add-task](add_task.png)
-![edit-task](edit_task.png)
+This is a JavaScript code for a simple to-do list application with the ability to add, edit, and delete tasks. It initializes an empty array called "tasks" and creates variables that store references to various HTML elements on the page.
 
-## Requirements
-* `Title` should be unique
-* `Status` is one of 3 options : `["not started", "in progress", "done"]`
-* Form to add/edit tasks should be opened/closed by clicking on a button (see the screenshot)
-* Deploy your project to github page and provide link to your live server in README. Make sure your README file is informative and codes are well-formatted
-* Only minimum style (with SASS) is needed.
+The code adds event listeners to two buttons, "Add Task" and "Cancel," which control the visibility of the task form. When the "Add Task" button is clicked, the form becomes visible, and when the "Cancel" button is clicked, the form is hidden.
+
+The code defines several functions for manipulating the "tasks" array, including "isTitleUnique" to check whether a task title is unique, "addTask" to add a new task to the array, "renderTasks" to display the current list of tasks, "removeTask" to remove a task from the array, and "editTask" to edit an existing task.
+
+The code also defines event listeners for submitting the task form and for editing or deleting a task. When a task is submitted, the title, deadline, and status are extracted from the form and added to the "tasks" array. When a task is edited, the task's details are extracted from the array and pre-populated in the task form, and when the "Submit Task" button is clicked, the updated details are saved back to the "tasks" array.
+
+The code renders the list of tasks using a loop that creates an HTML element for each task in the array. The HTML element includes the task's title, deadline, status, and buttons for editing and deleting the task.
+
+Finally, the code adds event listeners to the "Edit" and "Remove" buttons for each task in the list.

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="dist/css/main.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header__content">
+        <div class="header__logo">
+            <a href="/">Task Manager</a>
+        </div>
+        <div class="header__user">
+            <span>Welcome, Habe Tsedeke</span>
+            <a href="/account">My Account</a>
+        </div>
+    </div>
+</header>
+
+
+  <button id="add-task-btn">Add Task</button>
+
+  <div id="task-form-container" class="hidden">
+    <form id="task-form">
+      <label for="task-title">Title</label>
+      <input type="text" id="task-title" required>
+      <label for="task-deadline">Deadline</label>
+      <input type="date" id="task-deadline" required>
+      <label for="task-status">Status</label>
+      <select id="task-status">
+        <option value="not started">Not Started</option>
+        <option value="in progress">In Progress</option>
+        <option value="done">Done</option>
+      </select>
+      <button id="submit-task-btn" type="submit">Save Task</button>
+      <button id="cancel-task-btn" type="button">Cancel</button>
+    </form>
+  </div>
+  <div id="tasks-container">
+    <table id="task-table">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Deadline</th>
+          <th>Status</th>
+          <th>Edit</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody id="task-list"></tbody>
+    </table>
+  </div>
+  
+  <script src="index.js"></script>
+  <footer class="footer">
+    <div class="footer__content">
+        <p>Author: Habe Tsedeke </p>
+    </div>
+</footer>
+</body>
+</html>
